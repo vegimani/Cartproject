@@ -48,6 +48,10 @@
             <input type="checkbox" class="custom-control-input" formControlName="shorts" id="Check4">
             <label class="custom-control-label" for="Check4">shorts</label>
         </div> <!-- form-check.// -->
+        <div *ngFor="let skill of skills.controls; let i=index">
+          <input type="checkbox" [formControl]="skill"/> {{checboxList.skills[i].name}}
+       </div>
+  
       </div> <!-- card-body.// -->
     </div>
   </article> <!-- card-group-item.// -->

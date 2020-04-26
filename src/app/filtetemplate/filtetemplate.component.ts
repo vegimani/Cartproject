@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators,FormArray,FormControl } from '@angular/forms';
+import {checkboxList} from '../data';
 @Component({
   selector: 'app-filtetemplate',
   templateUrl: './filtetemplate.component.html',
@@ -8,6 +9,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class FiltetemplateComponent implements OnInit {
   registerForm: FormGroup;
   submitted = false;
+  checboxlist :any;
   constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit() {
@@ -17,12 +19,35 @@ export class FiltetemplateComponent implements OnInit {
       Tshirts: ['', Validators.required],
       Jeans: ['', Validators.required],
       Shirts: ['', Validators.required],
-      shorts: ['', Validators.required]
+      shorts: ['', Validators.required],
+      skills: new FormArray([
+        new FormControl(false),
+        new FormControl(false),
+      ])
   });
+  this.checboxlist =checkboxList;
   }
-  submit(eve){
-    console.log(eve);
+  submit(filters){
+    let skills= filters.skills.map((selected, i) => {
+      return {
+        id: this.checboxlist.skills[i].id,
+       selected:selected,
+        name:this.checboxlist.skills[i].name
+     }
+    });
+  
+  Object.keys(filters).forEach(key => filters[key] === '' || filters[key] ==null ? delete filters[key] : key);
+  //filters['firstName']='Mani';
+  filters["skills"]=skills.filter(x=>x.selected);
+  //filters["skills"]=[{id:1,name:'CSS'}]
+  
 
   }
+ 
+  get skills() {
+    return this.registerForm.get('skills');
+  };
+  
+  
 
 }
