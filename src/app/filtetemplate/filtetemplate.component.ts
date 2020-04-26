@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { FormBuilder, FormGroup, Validators,FormArray,FormControl } from '@angular/forms';
 import {checkboxList} from '../data';
 @Component({
@@ -9,7 +9,8 @@ import {checkboxList} from '../data';
 export class FiltetemplateComponent implements OnInit {
   registerForm: FormGroup;
   submitted = false;
-  checboxlist :any;
+  //checboxlist :any;
+  @Input() checboxlist :any;
   constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit() {
@@ -25,14 +26,14 @@ export class FiltetemplateComponent implements OnInit {
         new FormControl(false),
       ])
   });
-  this.checboxlist =checkboxList;
+ // this.checboxlist =checkboxList;
   }
   submit(filters){
     let skills= filters.skills.map((selected, i) => {
       return {
-        id: this.checboxlist.skills[i].id,
+        // id: this.checboxlist.skills[i].id,
        selected:selected,
-        name:this.checboxlist.skills[i].name
+        name:this.checboxlist[i]
      }
     });
   
@@ -48,6 +49,7 @@ export class FiltetemplateComponent implements OnInit {
     return this.registerForm.get('skills');
   };
   
-  
+
+
 
 }

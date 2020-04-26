@@ -12,6 +12,7 @@ export class MenproductComponent implements OnInit {
 
   url :any;
   products:any;
+  uniqueArr:any;
   constructor(private product:AppService,private bsService:BsService,private router:Router) { }
 
   ngOnInit() {
@@ -24,6 +25,10 @@ export class MenproductComponent implements OnInit {
         product.iscartAdded=false;
         return product
       })
+
+      this.uniqueArr = [... new Set(this.products.map(data => data.type))]
+     // console.log(uniqueArr)
+      
     },()=>{})
   }
 

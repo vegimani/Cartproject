@@ -1,5 +1,5 @@
 <div class="card">
-  <form [formGroup]="registerForm" >
+  <form [formGroup]="registerForm" *ngIf ='checboxlist' >
   <article class="card-group-item">
     <header class="card-header">
       <h6 class="title">Range input </h6>
@@ -48,13 +48,14 @@
             <input type="checkbox" class="custom-control-input" formControlName="shorts" id="Check4">
             <label class="custom-control-label" for="Check4">shorts</label>
         </div> <!-- form-check.// -->
+        
         <div *ngFor="let skill of skills.controls; let i=index">
-          <input type="checkbox" [formControl]="skill"/> {{checboxList.skills[i].name}}
+          <input type="checkbox" [formControl]="skill"/> {{checboxlist[i]}}
        </div>
   
       </div> <!-- card-body.// -->
     </div>
   </article> <!-- card-group-item.// -->
-  <button (click) ="submit(registerForm?.value)"></button>
+  <button (click) ="submit(registerForm?.value)">submit</button>
   </form>
 </div>
