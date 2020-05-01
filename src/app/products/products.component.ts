@@ -60,16 +60,17 @@ export class ProductsComponent implements OnInit {
     const keys = Object.keys(filters);
     const filterUser = user => {
     let result = keys.map(key => {
-    if (!~key.indexOf('cost') && !~key.indexOf('skills')) {
-    if(user[key]) {
-    return String(user[key]).toLowerCase().startsWith(String(filters[key]).toLowerCase())
-    } else {
-    return false;
-    }
-    }
+    // if (!~key.indexOf('cost') && !~key.indexOf('skills')) {
+    // if(user[key]) {
+    // return String(user[key]).toLowerCase().startsWith(String(filters[key]).toLowerCase())
+    // } else {
+    // return false;
+    // }
+    // }
+    return true;
     });
     // To Clean Array from undefined if the age is passed so the map will fill the gap with (undefined)
-    result = result.filter(it => it !== undefined);
+  //  result = result.filter(it => it !== undefined);
     // Filter the Age out from the other filters
     if (filters['Min'] && filters['Max']) {
     if (user['cost']) {

@@ -65,7 +65,10 @@ this.groupFilters.emit(filters);
     return this.registerForm.get('skills');
   };
   
-
+clear(){
+  this.registerForm.reset();
+  this.submit(this.registerForm.value)
+}
 
 
 }
