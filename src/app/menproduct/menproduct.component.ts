@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output,EventEmitter,ViewChild } from '@angular/core';
 import { AppService } from '../appservice';
 import {urls} from '../urls';
 import {BsService} from '../../shared-services/behaviourSubject';
 import { Router } from '@angular/router';
+import { ProductsComponent } from '../products/products.component';
+
 @Component({
   selector: 'app-menproduct',
   templateUrl: './menproduct.component.html',
@@ -13,6 +15,10 @@ export class MenproductComponent implements OnInit {
   url :any;
   products:any;
   uniqueArr:any;
+  filters:any;
+  @Output() data =new EventEmitter<any>(null);
+  @ViewChild(ProductsComponent) productsComponent: ProductsComponent;
+
   constructor(private product:AppService,private bsService:BsService,private router:Router) { }
 
   ngOnInit() {
@@ -30,6 +36,10 @@ export class MenproductComponent implements OnInit {
      // console.log(uniqueArr)
       
     },()=>{})
+  }
+  filterdata($event){
+this.filters =$event;
+this.productsComponent.filterUserList(this.filters,this.products)
   }
 
   addToCart(product:any,type){
