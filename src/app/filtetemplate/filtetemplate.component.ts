@@ -49,12 +49,13 @@ this.registerForm=newForm;
 filters["skills"]=skills.filter(x=>x.selected);
 //filters["skills"]=[{id:1,name:'CSS'}]
 
-this.groupFilters.emit(filters);
 console.log('emitdata',filters)
 
   Object.keys(filters).forEach(key => filters[key] === '' || filters[key] ==null ? delete filters[key] : key);
   //filters['firstName']='Mani';
   filters["skills"]=skills.filter(x=>x.selected);
+  
+this.groupFilters.emit(filters);
   //filters["skills"]=[{id:1,name:'CSS'}]
   
 

@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class ProductsComponent implements OnInit {
   url :any;
-  filteredUsers:any;
+  filteredProducts:any;
   @Input() products:any;
   @Input() groupFilters: Object;
 
@@ -18,6 +18,7 @@ export class ProductsComponent implements OnInit {
   constructor(private product:AppService,private bsService:BsService,private router:Router) { }
 
   ngOnInit() {
+    this.filteredProducts=this.products;
     // this.url =urls.products;
     // this.product.get(this.url.get).subscribe( (res)=>{
     //   this.products=res;
@@ -30,7 +31,7 @@ export class ProductsComponent implements OnInit {
     // },()=>{})
   }
   ngOnChanges(): void {
-    if (this.groupFilters) this.filterUserList(this.groupFilters, this.products);
+    // if (this.groupFilters) this.filterUserList(this.groupFilters, this.products);
     }
     
   addToCart(product:any,type){
@@ -55,7 +56,7 @@ export class ProductsComponent implements OnInit {
   
 //filtercode 
   filterUserList(filters: any, users: any): void {
-    this.filteredUsers = this.products; //Reset User List
+    this.filteredProducts = this.products; //Reset User List
     const keys = Object.keys(filters);
     const filterUser = user => {
     let result = keys.map(key => {
@@ -90,7 +91,7 @@ export class ProductsComponent implements OnInit {
       
         if(keepGoing){
     
-          if(element['name']==user['name']){
+          if(element['name']==user['type']){
             result.push(true);
             keepGoing = false;
             
@@ -116,7 +117,7 @@ export class ProductsComponent implements OnInit {
     
     }
     
-    this.filteredUsers = this.products.filter(filterUser);
+    this.filteredProducts = this.products.filter(filterUser);
     }
     
 

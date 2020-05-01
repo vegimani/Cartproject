@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-lg-3 col-sm-6" *ngFor ="let product of products">
+  <div class="col-lg-3 col-sm-6" *ngFor ="let product of filteredProducts">
     <div class="product-item">
       <div class="pi-pic">
         <img [src]="product?.imagepath" (click)="openSelectedProduct(product)"  alt="">
@@ -10,7 +10,7 @@
         </div>
       </div>
       <div class="pi-text">
-        <h6>{{product?.cost}}</h6>
+        <h6>${{product?.cost}}</h6>
         <p>{{product?.productname}} </p>
         {{product?.type}}
       </div>
