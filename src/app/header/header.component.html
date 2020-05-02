@@ -47,7 +47,7 @@
       <!-- menu -->
       <ul class="main-menu">
      <li *ngFor ="let header of headerMenu">
-      <a href="#">
+      <a >
       {{header.name}} </a>
      <ul [ngClass]="header.subMenu && header.subMenu.length>0?'sub-menu':''"  *ngIf ="header.subMenu && header.subMenu.length>0" >
        <li *ngFor='let headerinner of header.subMenu'>

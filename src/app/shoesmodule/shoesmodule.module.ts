@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {ShoesComponent} from './shoes/shoes.component';
 import { RouterModule, Routes } from '@angular/router';
+import {AppService} from '../appservice';
 
 
 const routes: Routes = [
@@ -15,7 +16,9 @@ export const UserRoutes = RouterModule.forChild(routes);
   imports: [
     CommonModule
   ],
+  providers:[AppService],
   bootstrap:[ShoesComponent]
+
 })
 export class ShoesmoduleModule { }
 

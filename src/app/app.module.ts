@@ -24,13 +24,14 @@ import { JewlearyComponent } from './jewleary/jewleary.component';
 import { ShoesComponent } from './shoesmodule/shoes/shoes.component';
 import { CheppalesComponent } from './cheppales/cheppales.component';
 import {ReactiveFormsModule,FormsModule} from '@angular/forms';
+import { LogipageComponent } from './logipage/logipage.component';
 
 
 @NgModule({
   imports:      [ BrowserModule,AppRoutingModule,CarouselModule.forRoot(),HttpClientModule,TabsModule.forRoot(),ReactiveFormsModule,FormsModule ],
   declarations: [ AppComponent,CarouselComponent,FavioriteComponent,HeaderComponent,HomeComponent, MenproductComponent,OrderComponent,
-    OrderlisComponent,ProductinfoComponent,ProductsComponent,AddtocartComponent, FiltetemplateComponent, WomensproductComponent, JewlearyComponent, ShoesComponent, CheppalesComponent],
-  bootstrap:    [ AppComponent ],
+    OrderlisComponent,ProductinfoComponent,ProductsComponent,AddtocartComponent, FiltetemplateComponent, WomensproductComponent, JewlearyComponent, ShoesComponent, CheppalesComponent, LogipageComponent],
+  bootstrap:    [ LogipageComponent ],
   providers:[AppService,BsService]
 })
 export class AppModule { }
