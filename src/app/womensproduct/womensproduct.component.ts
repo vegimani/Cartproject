@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ViewChild } from '@angular/core';
 import { AppService } from '../appservice';
 import {urls} from '../urls';
 import {BsService} from '../../shared-services/behaviourSubject';
 import { Router } from '@angular/router';
-
+import {ProductsComponent} from '../products/products.component'
 @Component({
   selector: 'app-womensproduct',
   templateUrl: './womensproduct.component.html',
@@ -14,6 +14,9 @@ export class WomensproductComponent implements OnInit {
 
   url :any;
   products:any;
+  uniqueArr:any;
+  filters;
+   @ViewChild(ProductsComponent) productsComponent: ProductsComponent;
   constructor(private product:AppService,private bsService:BsService,private router:Router) { }
 
   ngOnInit() {
@@ -26,9 +29,13 @@ export class WomensproductComponent implements OnInit {
         product.iscartAdded=false;
         return product
       })
+      this.uniqueArr = [... new Set(this.products.map(data => data.type))]
     },()=>{})
   }
-
+  filterdata($event){
+    this.filters =$event;
+    this.productsComponent.filterUserList(this.filters,this.products)
+      }
   addToCart(product:any,type){
 
     if(type=='favourite'){

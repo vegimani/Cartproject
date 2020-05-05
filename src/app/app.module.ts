@@ -18,20 +18,24 @@ import { CarouselModule } from 'ngx-bootstrap';
 import {BsService} from '../shared-services/behaviourSubject';
 import {HttpClientModule} from '@angular/common/http';
 import { TabsModule } from 'ngx-bootstrap';
-import { FiltetemplateComponent } from './filtetemplate/filtetemplate.component';
+//import { FiltetemplateComponent } from './filtetemplate/filtetemplate.component';
 import { WomensproductComponent } from './womensproduct/womensproduct.component';
 import { JewlearyComponent } from './jewleary/jewleary.component';
-import { ShoesComponent } from './shoesmodule/shoes/shoes.component';
+
 import { CheppalesComponent } from './cheppales/cheppales.component';
 import {ReactiveFormsModule,FormsModule} from '@angular/forms';
 import { LogipageComponent } from './logipage/logipage.component';
+import {SharedModule} from '../app/filtetemplate/shared.module';
+import { ListcomponentComponent } from './listcomponent/listcomponent.component';
 
 
 @NgModule({
-  imports:      [ BrowserModule,AppRoutingModule,CarouselModule.forRoot(),HttpClientModule,TabsModule.forRoot(),ReactiveFormsModule,FormsModule ],
+  imports:      [ BrowserModule,AppRoutingModule,CarouselModule.forRoot(),HttpClientModule,
+    TabsModule.forRoot(),ReactiveFormsModule,FormsModule,SharedModule ],
   declarations: [ AppComponent,CarouselComponent,FavioriteComponent,HeaderComponent,HomeComponent, MenproductComponent,OrderComponent,
-    OrderlisComponent,ProductinfoComponent,ProductsComponent,AddtocartComponent, FiltetemplateComponent, WomensproductComponent, JewlearyComponent, ShoesComponent, CheppalesComponent, LogipageComponent],
-  bootstrap:    [ LogipageComponent ],
+    OrderlisComponent,ProductinfoComponent,ProductsComponent,AddtocartComponent, WomensproductComponent, JewlearyComponent, CheppalesComponent, LogipageComponent, ListcomponentComponent],
+  bootstrap:    [ AppComponent ],
+  exports:[],
   providers:[AppService,BsService]
 })
 export class AppModule { }

@@ -1,6 +1,7 @@
 export const headerTabs=[{
     id:1,
-    name:'Home'
+    name:'Home',
+    isActive:true
   
   },{
   

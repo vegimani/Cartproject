@@ -81,6 +81,7 @@
   "imagepath":"./img/product/1.jpg",
   "cart":"ADD TO CART",
   "cost":"$35,00",
+  "type":"Gagra",
   "productname":"Flamboyant Pink Top",
   "shortDescription":"This example shows how to create a basic navigation tab. It is not toggleable/dynamic yet (you can't click on the links to display different content)- see the last example in the Bootstrap Tabs and Pills Tutorial to find out how this can be done",
   "description":"This example shows how to create a basic navigation tab. It is not toggleable/dynamic yet (you can't click on the links to display different content)- see the last example in the Bootstrap Tabs and Pills Tutorial to find out how this can be done",
@@ -105,13 +106,13 @@
 
 
 },
-{"id":2,"imagepath":"./img/product/2.jpg","cart":"ADD TO CART","cost":"$37,00","productname":"Flamboyant White StripesTop"},
-{"id":3,"imagepath":"./img/product/3.jpg","cart":"ADD TO CART","cost":"$45,00","productname":"Black and White Stripes Dress"},
-{"id":4,"imagepath":"./img/product/4.jpg","cart":"ADD TO CART","cost":"$51,00","productname":"Pink Top"},
-{"id":5,"imagepath":"./img/product/5.jpg","cart":"ADD TO CART","cost":"$25,00","productname":"Flamboyant Pink Top"},
-{"id":6,"imagepath":"./img/product/6.jpg","cart":"ADD TO CART","cost":"$75,00","productname":"White Stripes"},
-{"id":7,"imagepath":"./img/product/7.jpg","cart":"ADD TO CART","cost":"$35,00","productname":"Flamboyant Pink Top"},
-{"id":8,"imagepath":"./img/product/8.jpg","cart":"ADD TO CART","cost":"$53,00","productname":"Black and White Stripes Dress"}
+{"id":2,"imagepath":"./img/product/2.jpg","cart":"ADD TO CART","cost":"$37,00","productname":"Flamboyant White StripesTop","type":"pujjabi"},
+{"id":3,"imagepath":"./img/product/3.jpg","cart":"ADD TO CART","cost":"$45,00","productname":"Black and White Stripes Dress","type":"pujjabi"},
+{"id":4,"imagepath":"./img/product/4.jpg","cart":"ADD TO CART","cost":"$51,00","productname":"Pink Top","type":"jeans"},
+{"id":5,"imagepath":"./img/product/5.jpg","cart":"ADD TO CART","cost":"$25,00","productname":"Flamboyant Pink Top","type":"pujjabi"},
+{"id":6,"imagepath":"./img/product/6.jpg","cart":"ADD TO CART","cost":"$75,00","productname":"White Stripes","type":"anarkali"},
+{"id":7,"imagepath":"./img/product/7.jpg","cart":"ADD TO CART","cost":"$35,00","productname":"Flamboyant Pink Top","type":"pujjabi"},
+{"id":8,"imagepath":"./img/product/8.jpg","cart":"ADD TO CART","cost":"$53,00","productname":"Black and White Stripes Dress","type":"anarkali"}
 
 
 
@@ -121,6 +122,7 @@
   "imagepath":"./img/product/shoes/1.jpg",
   "cart":"ADD TO CART",
   "cost":"$35,00",
+  "type":"woodland",
   "productname":"Flamboyant Pink Top",
   "shortDescription":"This example shows how to create a basic navigation tab. It is not toggleable/dynamic yet (you can't click on the links to display different content)- see the last example in the Bootstrap Tabs and Pills Tutorial to find out how this can be done",
   "description":"This example shows how to create a basic navigation tab. It is not toggleable/dynamic yet (you can't click on the links to display different content)- see the last example in the Bootstrap Tabs and Pills Tutorial to find out how this can be done",
@@ -145,13 +147,13 @@
 
 
 },
-{"id":2,"imagepath":"./img/product/shoes/2.jpg","cart":"ADD TO CART","cost":"$37,00","productname":"Flamboyant White StripesTop"},
-{"id":3,"imagepath":"./img/product/shoes/3.jpg","cart":"ADD TO CART","cost":"$45,00","productname":"Black and White Stripes Dress"},
-{"id":4,"imagepath":"./img/product/shoes/4.jpg","cart":"ADD TO CART","cost":"$51,00","productname":"Pink Top"},
-{"id":5,"imagepath":"./img/product/shoes/5.jpg","cart":"ADD TO CART","cost":"$25,00","productname":"Flamboyant Pink Top"},
-{"id":6,"imagepath":"./img/product/shoes/6.jpg","cart":"ADD TO CART","cost":"$75,00","productname":"White Stripes"},
-{"id":7,"imagepath":"./img/product/shoes/7.jpg","cart":"ADD TO CART","cost":"$35,00","productname":"Flamboyant Pink Top"},
-{"id":8,"imagepath":"./img/product/shoes/8.jpg","cart":"ADD TO CART","cost":"$53,00","productname":"Black and White Stripes Dress"}
+{"id":2,"imagepath":"./img/product/shoes/2.jpg","cart":"ADD TO CART","cost":"$37,00","productname":"Flamboyant White StripesTop","type":"nike"},
+{"id":3,"imagepath":"./img/product/shoes/3.jpg","cart":"ADD TO CART","cost":"$45,00","productname":"Black and White Stripes Dress","type":"loofers"},
+{"id":4,"imagepath":"./img/product/shoes/4.jpg","cart":"ADD TO CART","cost":"$51,00","productname":"Pink Top","type":"nike"},
+{"id":5,"imagepath":"./img/product/shoes/5.jpg","cart":"ADD TO CART","cost":"$25,00","productname":"Flamboyant Pink Top","type":"adidas"},
+{"id":6,"imagepath":"./img/product/shoes/6.jpg","cart":"ADD TO CART","cost":"$75,00","productname":"White Stripes","type":"nike"},
+{"id":7,"imagepath":"./img/product/shoes/7.jpg","cart":"ADD TO CART","cost":"$35,00","productname":"Flamboyant Pink Top","type":"loofers"},
+{"id":8,"imagepath":"./img/product/shoes/8.jpg","cart":"ADD TO CART","cost":"$53,00","productname":"Black and White Stripes Dress","type":"woodland"}
 
 
 
@@ -161,6 +163,7 @@
   "imagepath":"./img/product/jewalaries/1.jpg",
   "cart":"ADD TO CART",
   "cost":"$35,00",
+  "type":"bangales",
   "productname":"Flamboyant Pink Top",
   "shortDescription":"This example shows how to create a basic navigation tab. It is not toggleable/dynamic yet (you can't click on the links to display different content)- see the last example in the Bootstrap Tabs and Pills Tutorial to find out how this can be done",
   "description":"This example shows how to create a basic navigation tab. It is not toggleable/dynamic yet (you can't click on the links to display different content)- see the last example in the Bootstrap Tabs and Pills Tutorial to find out how this can be done",
@@ -185,13 +188,13 @@
 
 
 },
-{"id":2,"imagepath":"./img/product/jewalaries/2.jpg","cart":"ADD TO CART","cost":"$37,00","productname":"Flamboyant White StripesTop"},
-{"id":3,"imagepath":"./img/product/jewalaries/3.jpg","cart":"ADD TO CART","cost":"$45,00","productname":"Black and White Stripes Dress"},
-{"id":4,"imagepath":"./img/product/jewalaries/4.jpg","cart":"ADD TO CART","cost":"$51,00","productname":"Pink Top"},
-{"id":5,"imagepath":"./img/product/jewalaries/5.jpg","cart":"ADD TO CART","cost":"$25,00","productname":"Flamboyant Pink Top"},
-{"id":6,"imagepath":"./img/product/jewalaries/6.jpg","cart":"ADD TO CART","cost":"$75,00","productname":"White Stripes"},
-{"id":7,"imagepath":"./img/product/jewalaries/7.jpg","cart":"ADD TO CART","cost":"$35,00","productname":"Flamboyant Pink Top"},
-{"id":8,"imagepath":"./img/product/jewalaries/8.jpg","cart":"ADD TO CART","cost":"$53,00","productname":"Black and White Stripes Dress"}
+{"id":2,"imagepath":"./img/product/jewalaries/2.jpg","cart":"ADD TO CART","cost":"$37,00","productname":"Flamboyant White StripesTop","type":"neckless"},
+{"id":3,"imagepath":"./img/product/jewalaries/3.jpg","cart":"ADD TO CART","cost":"$45,00","productname":"Black and White Stripes Dress","type":"braslite"},
+{"id":4,"imagepath":"./img/product/jewalaries/4.jpg","cart":"ADD TO CART","cost":"$51,00","productname":"Pink Top","type":"neckless"},
+{"id":5,"imagepath":"./img/product/jewalaries/5.jpg","cart":"ADD TO CART","cost":"$25,00","productname":"Flamboyant Pink Top","type":"handchain"},
+{"id":6,"imagepath":"./img/product/jewalaries/6.jpg","cart":"ADD TO CART","cost":"$75,00","productname":"White Stripes","type":"neckless"},
+{"id":7,"imagepath":"./img/product/jewalaries/7.jpg","cart":"ADD TO CART","cost":"$35,00","productname":"Flamboyant Pink Top","type":"handchain"},
+{"id":8,"imagepath":"./img/product/jewalaries/8.jpg","cart":"ADD TO CART","cost":"$53,00","productname":"Black and White Stripes Dress","type":"neckless"}
 
 
 
@@ -201,6 +204,7 @@
   "imagepath":"./img/product/cheppales/1.jpg",
   "cart":"ADD TO CART",
   "cost":"$35,00",
+  "type":"striker",
   "productname":"Flamboyant Pink Top",
   "shortDescription":"This example shows how to create a basic navigation tab. It is not toggleable/dynamic yet (you can't click on the links to display different content)- see the last example in the Bootstrap Tabs and Pills Tutorial to find out how this can be done",
   "description":"This example shows how to create a basic navigation tab. It is not toggleable/dynamic yet (you can't click on the links to display different content)- see the last example in the Bootstrap Tabs and Pills Tutorial to find out how this can be done",
@@ -225,13 +229,13 @@
 
 
 },
-{"id":2,"imagepath":"./img/product/cheppales/2.jpg","cart":"ADD TO CART","cost":"$37,00","productname":"Flamboyant White StripesTop"},
-{"id":3,"imagepath":"./img/product/cheppales/3.jpg","cart":"ADD TO CART","cost":"$45,00","productname":"Black and White Stripes Dress"},
-{"id":4,"imagepath":"./img/product/cheppales/4.jpg","cart":"ADD TO CART","cost":"$51,00","productname":"Pink Top"},
-{"id":5,"imagepath":"./img/product/cheppales/5.jpg","cart":"ADD TO CART","cost":"$25,00","productname":"Flamboyant Pink Top"},
-{"id":6,"imagepath":"./img/product/cheppales/6.jpg","cart":"ADD TO CART","cost":"$75,00","productname":"White Stripes"},
-{"id":7,"imagepath":"./img/product/cheppales/7.jpg","cart":"ADD TO CART","cost":"$35,00","productname":"Flamboyant Pink Top"},
-{"id":8,"imagepath":"./img/product/cheppales/8.jpg","cart":"ADD TO CART","cost":"$53,00","productname":"Black and White Stripes Dress"}
+{"id":2,"imagepath":"./img/product/cheppales/2.jpg","cart":"ADD TO CART","cost":"$37,00","productname":"Flamboyant White StripesTop","type":"mayfield"},
+{"id":3,"imagepath":"./img/product/cheppales/3.jpg","cart":"ADD TO CART","cost":"$45,00","productname":"Black and White Stripes Dress","type":"mayfield"},
+{"id":4,"imagepath":"./img/product/cheppales/4.jpg","cart":"ADD TO CART","cost":"$51,00","productname":"Pink Top","type":"woodland"},
+{"id":5,"imagepath":"./img/product/cheppales/5.jpg","cart":"ADD TO CART","cost":"$25,00","productname":"Flamboyant Pink Top","type":"paragon"},
+{"id":6,"imagepath":"./img/product/cheppales/6.jpg","cart":"ADD TO CART","cost":"$75,00","productname":"White Stripes","type":"mayfield"},
+{"id":7,"imagepath":"./img/product/cheppales/7.jpg","cart":"ADD TO CART","cost":"$35,00","productname":"Flamboyant Pink Top","type":"paragon"},
+{"id":8,"imagepath":"./img/product/cheppales/8.jpg","cart":"ADD TO CART","cost":"$53,00","productname":"Black and White Stripes Dress","type":"mayfield"}
 
 
 

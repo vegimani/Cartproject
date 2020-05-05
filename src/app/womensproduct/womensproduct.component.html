@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-4">
-     <app-filtetemplate></app-filtetemplate>
+     <app-filtetemplate [checboxlist] ='uniqueArr' *ngIf ='uniqueArr'(groupFilters)="filterdata($event)"></app-filtetemplate>
     </div>
     <div class="col-md-8">
       <div class="row">

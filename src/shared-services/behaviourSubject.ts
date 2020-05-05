@@ -16,6 +16,8 @@ export class BsService{
     updateSelectedProduct(product:any){
         this.selectedProduct.next(product);
     }
+    currentCartData = this.selectedProduct.asObservable(); 
+    currentFavouritData = this.favouriteData.asObservable(); 
 
 
 

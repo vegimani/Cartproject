@@ -26,7 +26,7 @@
                 <i class="flaticon-bag"></i>
                 <span>{{cartList?.length}}</span>
               </div>
-              <a href="#">Shopping Cart</a>
+              <a  (click)='navgatToCart(route)'>Shopping Cart</a>
             </div>
 
 
@@ -46,16 +46,16 @@
     <div class="container">
       <!-- menu -->
       <ul class="main-menu">
-     <li *ngFor ="let header of headerMenu">
-      <a >
+     <li *ngFor ="let header of headerMenu" >
+      <a [class.active]='header.isActive' (click)="navigateTo(header)">
       {{header.name}} </a>
-     <ul [ngClass]="header.subMenu && header.subMenu.length>0?'sub-menu':''"  *ngIf ="header.subMenu && header.subMenu.length>0" >
+     <!-- <ul [ngClass]="header.subMenu && header.subMenu.length>0?'sub-menu':''"  *ngIf ="header.subMenu && header.subMenu.length>0" >
        <li *ngFor='let headerinner of header.subMenu'>
          <a href='#'>{{headerinner.subMenuName}}</a>
 
        </li>
 
-     </ul>
+     </ul> -->
      
     </li>
      

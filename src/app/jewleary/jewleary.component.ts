@@ -13,6 +13,9 @@ export class JewlearyComponent implements OnInit {
 
   url :any;
   products:any;
+  uniqueArr
+  filters
+  productsComponent
   constructor(private product:AppService,private bsService:BsService,private router:Router) { }
   ngOnInit() {
     this.url =urls.jewalaries;
@@ -24,9 +27,13 @@ export class JewlearyComponent implements OnInit {
         product.iscartAdded=false;
         return product
       })
+      this.uniqueArr = [... new Set(this.products.map(data => data.type))]
     },()=>{})
   }
-
+  filterdata($event){
+    this.filters =$event;
+    this.productsComponent.filterUserList(this.filters,this.products)
+      }
   addToCart(product:any,type){
 
     if(type=='favourite'){
