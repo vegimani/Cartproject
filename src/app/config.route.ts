@@ -17,7 +17,7 @@ export const routes: Routes = [
     {path:'order', component:OrderComponent},
     {path:'orderlist',component:OrderlisComponent},
     {path:'men',component:MenproductComponent},
-    {path :'women',component:WomensproductComponent},
+    {path :'women',component:MenproductComponent},
     {path :"chapals" , component:CheppalesComponent},
     {path:'jewelery', component:JewlearyComponent},
     {path:'list',component:ListcomponentComponent},

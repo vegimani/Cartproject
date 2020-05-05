@@ -2,7 +2,7 @@ import { Component, OnInit, Output,EventEmitter,ViewChild } from '@angular/core'
 import { AppService } from '../appservice';
 import {urls} from '../urls';
 import {BsService} from '../../shared-services/behaviourSubject';
-import { Router } from '@angular/router';
+import { Router ,NavigationStart} from '@angular/router';
 import { ProductsComponent } from '../products/products.component';
 
 @Component({
@@ -19,10 +19,16 @@ export class MenproductComponent implements OnInit {
   @Output() data =new EventEmitter<any>(null);
   @ViewChild(ProductsComponent) productsComponent: ProductsComponent;
 
-  constructor(private product:AppService,private bsService:BsService,private router:Router) { }
+  constructor(private product:AppService,private bsService:BsService,private router:Router) {
+    
+      }
 
   ngOnInit() {
-    this.url =urls.mensproduct;
+    if(this.router.url == '/men')
+ this.url = urls.mensproduct;
+  this.getproductlist();
+  }
+  getproductlist(){
     this.product.get(this.url.get).subscribe( (res)=>{
       this.products=res;
       this.products.map((product)=>{
