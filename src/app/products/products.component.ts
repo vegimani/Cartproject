@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class ProductsComponent implements OnInit {
   url :any;
   filteredProducts:any;
+  @Input() isList:boolean;
   @Input() products:any;
   @Input() groupFilters: Object;
 

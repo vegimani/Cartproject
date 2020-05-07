@@ -2175,6 +2175,7 @@ ol {
 @media (min-width: 1200px) {
 	.container {
 		max-width: 1175px;
+		margin-top:10px;
 	}
 }
 

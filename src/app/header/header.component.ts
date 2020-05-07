@@ -27,8 +27,8 @@ export class HeaderComponent implements OnInit {
       })
 
   }
-  navgatToCart(route){
-    this.route.navigateByUrl(`/list`)
+  navigateToCart(route){
+    this.route.navigateByUrl(`/list/${route}`)
   }
   navigateTo(header){
     this.headerMenu.map( (item) => {

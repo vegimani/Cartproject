@@ -1,8 +1,12 @@
 <div class="container">
 	<div class="row">
-		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 		<div class="my-list">
-			<img src="http://hpservicecenterschennai.in/images/hp_laptop_service_centers_in_guindy.png" alt="dsadas" />
+			{{listName}}
+			<app-products [products] ='products' [isList]="true"
+			*ngIf='products'
+			></app-products>
+			<!-- <img src="http://hpservicecenterschennai.in/images/hp_laptop_service_centers_in_guindy.png" alt="dsadas" />
 			<h3>HP Core i3 6th Gen</h3>
 			<span>RS:45K</span>
 			<span class="pull-right">SKU:100022</span>
@@ -12,7 +16,7 @@
 			<img src="http://hpservicecenterschennai.in/images/hp_laptop_service_centers_in_guindy.png" alt="dsadas" />
 			<a href="#" class="btn btn-info">Add To Cart</a>
 			<a href="#" class="btn btn-info">Deatil</a>
-			</div>
+			</div> -->
 		</div>
 		</div>
 	

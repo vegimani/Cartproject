@@ -1,5 +1,5 @@
-<div class="row">
-  <div class="col-lg-3 col-sm-6" *ngFor ="let product of filteredProducts">
+<div class="row productList">
+  <div class="col-lg-3 col-sm-6" [class.col-lg-12]="isList" *ngFor ="let product of filteredProducts">
     <div class="product-item">
       <div class="pi-pic">
         <img [src]="product?.imagepath" (click)="openSelectedProduct(product)"  alt="">

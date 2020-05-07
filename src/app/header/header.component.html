@@ -23,16 +23,18 @@
             <!--Cart Compoennet-->
             <div class="up-item">
               <div class="shopping-card">
-                <i class="flaticon-bag"></i>
+                <i class="flaticon-bag" (click)="navigateToCart('cart')"></i>
                 <span>{{cartList?.length}}</span>
               </div>
-              <a  (click)='navgatToCart(route)'>Shopping Cart</a>
+              <a >Shopping Cart</a>
             </div>
 
 
             <!--favourite cart-->
             <div class="up-item">
-            <app-faviorite [favouriteList]="favouriteList">
+            <app-faviorite [favouriteList]="favouriteList"
+            (navigateToRoute)="navigateToCart($event)"
+            >
 
             </app-faviorite>
             </div>

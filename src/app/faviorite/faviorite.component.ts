@@ -1,4 +1,5 @@
-import { Component, OnInit ,Input} from '@angular/core';
+import { Component, OnInit ,Input, Output,EventEmitter} from '@angular/core';
+
 
 @Component({
   selector: 'app-faviorite',
@@ -8,11 +9,15 @@ import { Component, OnInit ,Input} from '@angular/core';
 export class FavioriteComponent implements OnInit {
   @Input() cartList:any;
   @Input() favouriteList:any;
+  @Output() navigateToRoute = new EventEmitter<any>();
   constructor() { }
 
   ngOnInit() {
 
    
   }
-
+  addToCart(route){
+    this.navigateToRoute.emit(route)
+   
+  }
 }

@@ -16,6 +16,6 @@ export const routes: Routes = [
     {path :'women',component:Allproducts},
     {path :"chapals" , component:Allproducts},
     {path:'jewelery', component:Allproducts},
-    {path:'list',component:ListcomponentComponent},
+    {path:'list/:listName',component:ListcomponentComponent},
    { path: 'shoes', loadChildren: './shoesmodule/shoesmodule.module#ShoesmoduleModule' },
 ];
