@@ -7,10 +7,10 @@ import { ProductsComponent } from '../products/products.component';
 
 @Component({
   selector: 'app-menproduct',
-  templateUrl: './menproduct.component.html',
-  styleUrls: ['./menproduct.component.scss']
+  templateUrl: './allproducts.component.html',
+  styleUrls: ['./allproducts.component.scss']
 })
-export class MenproductComponent implements OnInit {
+export class Allproducts implements OnInit {
 
   url :any;
   products:any;
@@ -24,8 +24,24 @@ export class MenproductComponent implements OnInit {
       }
 
   ngOnInit() {
-    if(this.router.url == '/men')
- this.url = urls.mensproduct;
+    switch(this.router.url ){
+      case '/men' :
+      this.url = urls.mensproduct;
+      break;
+      case '/women':
+        this.url = urls.womensproduct;
+        break;
+        case '/chapals':
+          this.url = urls.cheppales;
+          break;
+          case '/jewelery':
+            this.url = urls.jewalaries;
+            break;
+          
+    }
+
+//     if(this.router.url == '/men')
+//  this.url = urls.mensproduct;
   this.getproductlist();
   }
   getproductlist(){

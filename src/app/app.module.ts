@@ -5,7 +5,7 @@ import {CarouselComponent} from './carousel/carousel.component';
 import {FavioriteComponent} from './faviorite/faviorite.component';
 import {HeaderComponent} from './header/header.component';
 import {HomeComponent} from './home/home.component';
-import {MenproductComponent} from './menproduct/menproduct.component';
+import {Allproducts} from './allproducts/allproducts.component';
 import {OrderComponent} from './order/order.component';
 import {OrderlisComponent} from './orderlis/orderlis.component';
 import {ProductinfoComponent} from './productinfo/productinfo.component';
@@ -32,7 +32,7 @@ import { ListcomponentComponent } from './listcomponent/listcomponent.component'
 @NgModule({
   imports:      [ BrowserModule,AppRoutingModule,CarouselModule.forRoot(),HttpClientModule,
     TabsModule.forRoot(),ReactiveFormsModule,FormsModule,SharedModule ],
-  declarations: [ AppComponent,CarouselComponent,FavioriteComponent,HeaderComponent,HomeComponent, MenproductComponent,OrderComponent,
+  declarations: [ AppComponent,CarouselComponent,FavioriteComponent,HeaderComponent,HomeComponent, Allproducts,OrderComponent,
     OrderlisComponent,ProductinfoComponent,ProductsComponent,AddtocartComponent, WomensproductComponent, JewlearyComponent, CheppalesComponent, LogipageComponent, ListcomponentComponent],
   bootstrap:    [ AppComponent ],
   exports:[],
