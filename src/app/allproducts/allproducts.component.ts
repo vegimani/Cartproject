@@ -51,6 +51,18 @@ export class Allproducts implements OnInit {
         let myProduct=product;
         product.isVisited=false;
         product.iscartAdded=false;
+        this.bsService.favouriteData.subscribe((products)=>{
+          products.map((prod)=>{
+            if(prod.id==product.id){
+              product.isVisited=prod.isVisited;
+              product.iscartAdded=prod.iscartAdded
+            }
+            else{
+              product.isVisited=false;
+              product.iscartAdded=false;
+            }
+          })
+        })
         return product
       })
 

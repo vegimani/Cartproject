@@ -4,8 +4,11 @@
 		<div class="my-list">
 			{{listName}}
 			<app-products [products] ='products' [isList]="true"
-			*ngIf='products'
+			*ngIf='products && products.length>0'
 			></app-products>
+			<div *ngIf='!products || products.length==0'>
+				No products added
+			</div>
 			<!-- <img src="http://hpservicecenterschennai.in/images/hp_laptop_service_centers_in_guindy.png" alt="dsadas" />
 			<h3>HP Core i3 6th Gen</h3>
 			<span>RS:45K</span>
