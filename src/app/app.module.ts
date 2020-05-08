@@ -27,11 +27,11 @@ import {ReactiveFormsModule,FormsModule} from '@angular/forms';
 import { LogipageComponent } from './logipage/logipage.component';
 import {SharedModule} from '../app/filtetemplate/shared.module';
 import { ListcomponentComponent } from './listcomponent/listcomponent.component';
-
+import {ConfirmModalModule} from './confirmModal/confirmModal-Module';
 
 @NgModule({
   imports:      [ BrowserModule,AppRoutingModule,CarouselModule.forRoot(),HttpClientModule,
-    TabsModule.forRoot(),ReactiveFormsModule,FormsModule,SharedModule ],
+    TabsModule.forRoot(),ReactiveFormsModule,FormsModule,SharedModule,ConfirmModalModule ],
   declarations: [ AppComponent,CarouselComponent,FavioriteComponent,HeaderComponent,HomeComponent, Allproducts,OrderComponent,
     OrderlisComponent,ProductinfoComponent,ProductsComponent,AddtocartComponent, WomensproductComponent, JewlearyComponent, CheppalesComponent, LogipageComponent, ListcomponentComponent],
   bootstrap:    [ AppComponent ],

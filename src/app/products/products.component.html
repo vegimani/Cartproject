@@ -18,7 +18,7 @@
              <button class="btb btn-danger" style="margin-left:5px" (click)="removeFromCart(product)" >
               Remove
             </button>
-              <button class="btb btn-primary" style="margin-left:5px">
+              <button class="btb btn-primary" style="margin-left:5px" (click)="orderProduct(product)">
                 Order
               </button>
         </div>
@@ -35,5 +35,12 @@
      Total Price: {{totalPrice}}
   </div>
  
+</div>
+<div *ngIf="successmodel">
+    <confirm-modal [messageText]="successText"
+                   modalType="Success"
+                   [confirmButtonText]="'close'"
+                   headerText='Success'>
+    </confirm-modal>
 </div>
 

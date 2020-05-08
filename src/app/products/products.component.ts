@@ -1,4 +1,4 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit,Input ,ChangeDetectorRef} from '@angular/core';
 import { AppService } from '../appservice';
 import {urls} from '../urls';
 import {BsService} from '../../shared-services/behaviourSubject'
@@ -17,7 +17,7 @@ export class ProductsComponent implements OnInit {
   totalPrice:number;
 tempArray:any[]=[];
   
-  constructor(private product:AppService,private bsService:BsService,private router:Router) { }
+  constructor(private product:AppService,private bsService:BsService,private router:Router,private cd: ChangeDetectorRef) { }
 
   ngOnInit() {
     this.filteredProducts=this.products;
@@ -175,6 +175,13 @@ tempArray:any[]=[];
       return this.filteredProducts[0].cost
     }
    }
+    }
+    successText = "order has been success";
+    successmodel :boolean = false;
+    orderProduct(prod:any){
+this.successmodel = true;
+this.cd.detectChanges();
+
     }
 
 }
