@@ -32,6 +32,14 @@ export class ListcomponentComponent implements OnInit,OnChanges {
           else{
             this.products=this.favouriteList
           }
+          if(this.products && this.products.length>0){
+            this.products.map(prod=>{
+              prod.quantity=1
+            prod.itemPrice=prod.cost
+            return prod
+            });
+           
+          }
           if(this.productsComponent){
             this.productsComponent.filteredProducts=this.products
           }

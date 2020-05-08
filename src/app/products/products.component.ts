@@ -14,12 +14,15 @@ export class ProductsComponent implements OnInit {
   @Input() isList:boolean;
   @Input() products:any;
   @Input() groupFilters: Object;
-
+  totalPrice:number;
+tempArray:any[]=[];
   
   constructor(private product:AppService,private bsService:BsService,private router:Router) { }
 
   ngOnInit() {
     this.filteredProducts=this.products;
+   // this.tempArray=Object.assign(this.tempArray, this.filteredProducts);
+    this.totalPrice=this.getTotalPrice();
     // this.url =urls.products;
     // this.product.get(this.url.get).subscribe( (res)=>{
     //   this.products=res;
@@ -47,7 +50,7 @@ export class ProductsComponent implements OnInit {
   
     
    
-    this.bsService.updateFavouriteData(this.products);
+    this.bsService.updateFavouriteData(this.filteredProducts);
   }
 
   openSelectedProduct(product:any){
@@ -120,7 +123,24 @@ export class ProductsComponent implements OnInit {
     }
     
     this.filteredProducts = this.products.filter(filterUser);
+  
     }
     
+    dataChanged(product){
+     
+      product.cost=product.quantity * product.itemPrice;
+      this.totalPrice=this.getTotalPrice()
+
+    
+    }
+    getTotalPrice(){
+      if(this.filteredProducts && this.filteredProducts.length>1)
+     return  this.filteredProducts.reduce((prod,acc)=>{return parseFloat(prod.cost)+parseFloat(acc.cost)})
+   else{
+    if(this.filteredProducts){
+      return this.filteredProducts[0].cost
+    }
+   }
+    }
 
 }
