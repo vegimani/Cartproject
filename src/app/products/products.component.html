@@ -15,6 +15,9 @@
              <input type='number' min="1" [(ngModel)]="product.quantity"
              (change)="dataChanged(product)"
              >
+             <button class="btb btn-danger" style="margin-left:5px" (click)="removeFromCart(product)" >
+              Remove
+            </button>
               <button class="btb btn-primary" style="margin-left:5px">
                 Order
               </button>

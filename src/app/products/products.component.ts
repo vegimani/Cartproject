@@ -53,6 +53,40 @@ tempArray:any[]=[];
     this.bsService.updateFavouriteData(this.filteredProducts);
   }
 
+  removeFromCart(product:any){
+    let index=this.filteredProducts.findIndex(prod=>prod.id==product.id);
+    this.filteredProducts.splice(index,1);
+ 
+    let propertyName;
+    if(this.router.url=='/list/cart'){
+      propertyName='iscartAdded'
+    }
+    else if(this.router.url=='/list/favourite'){
+      propertyName='isVisited'
+
+    }
+    this.updateCartData(product,propertyName);
+    this.updatePrice(product);
+   
+  }
+  updateCartData(product,propertyName){
+    let modifiedProducts;
+    this.bsService.favouriteData.subscribe((products)=>{
+      modifiedProducts=products;
+          products.map((prod)=>{
+            if(prod.id==product.id){
+              
+              product[propertyName]=false;
+            }
+           
+          })})
+          this.bsService.updateFavouriteData(modifiedProducts)
+ 
+  }
+  updatePrice(product){
+
+    this.totalPrice=this.totalPrice-(product.quantity*product.itemPrice)
+  }
   openSelectedProduct(product:any){
     this.bsService.updateSelectedProduct(product);
     this.router.navigateByUrl('/productinfo')
