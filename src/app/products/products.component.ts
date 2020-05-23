@@ -110,7 +110,7 @@ tempArray:any[]=[];
     // To Clean Array from undefined if the age is passed so the map will fill the gap with (undefined)
   //  result = result.filter(it => it !== undefined);
     // Filter the Age out from the other filters
-    if (filters['Min'] && filters['Max']) {
+    if (filters['Min']!=null && filters['Min']>=0 && filters['Max']) {
     if (user['cost']) {
     if (+user['cost'] >= +filters['Min'] && +user['cost'] <= +filters['Max']) {
     result.push(true);

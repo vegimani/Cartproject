@@ -1,4 +1,4 @@
-export const headerTabs=[{
+export const headerTabs= [{
     id:1,
     name:'Home',
     isActive:true
